@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="Dropout" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.5.min.css" rel="stylesheet" type="text/css">
+
+    <script src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
+    <title>Market Research</title>
+    {{ js_resources|indent(4)|safe }}
+    {{ css_resources|indent(4)|safe }}
+    {{ plot_script|indent(4)|safe }}
+    {{ slider_script|indent(4)|safe }}
+  </head>
+  <body>
+		<center><i><h1>Analysis</h1></i>
+			To understand which market to penetrate into <br><br>
+		</center>
+        <form action="" method="post">
+            {{ form.csrf }}
+			<center>
+		        <div class="input text">
+					<span><b><i> Fields marked with * are mandatory </i></b></span><br/><br/>
+					{{ form.field1.label }} <br> {{ form.field1 }} <br/><br/>
+					{{ form.field2.label }} <br> {{ form.field2 }} <br/><br/>
+		      {{ form.field3.label }} <br> {{ form.field3 }} <br/><br/>
+					{{ form.field4.label }} <br> {{ form.field4 }} <br/><br/>
+		        </div>
+
+		        <div class="input submit">
+		            <input type="submit" value="Submit" />
+		        </div>
+		    </form>
+        {{ plot_div|indent(4)|safe }}
+        {{ slider_div|indent(4)|safe }}
+		</center>
+</body>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="Dropout" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.css" rel="stylesheet" type="text/css">
+		<link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.5.min.css" rel="stylesheet" type="text/css">
+
+		<script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
+		<title>Market Research</title>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="{{ url_for('index') }}">Market Research</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="{{ url_for('index') }}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+				</ul>
+			</div>
+		</nav>
+
+{% block body %}{% endblock %}
+
+	</body>
+</html>
